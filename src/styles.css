@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar { width: 8px; height: 3px;}
+::-webkit-scrollbar-button {  background-color: rgb(156 163 175); height: 0; }
+::-webkit-scrollbar-track {  background-color: rgb(31 41 55);}
+::-webkit-scrollbar-track-piece { background-color: rgb(31 41 55);}
+::-webkit-scrollbar-thumb { height: 50px; background-color: rgb(156 163 175); border-radius: 3px;}
+::-webkit-scrollbar-corner { background-color: rgb(31 41 55);}
+::-webkit-resizer { background-color: rgb(156 163 175);}
+
+.perspective-2048 { perspective: 2048px; }
+.preserve-3d { transform-style: preserve-3d; }
+.rotate-up { transform: rotateX(60deg) rotateZ(315deg); }
+@keyframes oscillate1 { 20% { transform: translateZ(-50px); } 70% { transform: translateZ(-100px); } }
+@keyframes oscillate2 { 30% { transform: translateZ(25px); }  60% { transform: translateZ(-25px); } }
+@keyframes oscillate3 { 40% { transform: translateZ(50px); }  80% { transform: translateZ(100px); } }
+.stack-img:nth-child(1) { transform: translateZ(-75px); animation: oscillate1 10s ease-in-out 0s infinite alternate; }
+.stack-img:nth-child(2) { transform: translateZ(0px); animation: oscillate2 14s ease-in-out 1s infinite forwards; }
+.stack-img:nth-child(3) { transform: translateZ(75px); animation: oscillate3 12s ease-in-out 0s infinite alternate-reverse; }
